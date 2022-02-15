@@ -198,7 +198,6 @@ Lima.render = function () {
   h3Elem.textContent = this.location;
   SalmonCookie.appendChild(h3Elem);
 
-  
   let ulElem = document.createElement('ul');
   SalmonCookie.appendChild(ulElem);
 
