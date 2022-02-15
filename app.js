@@ -218,7 +218,7 @@ function randCust(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-const city = [Seattle, Tokyo, Dubai, Paris, Lima]
+const city = [Seattle, Tokyo, Dubai, Paris, Lima];
 function cityRender() {
   for (let i = 0; i < city.length; i++) {
     let eachCity = city[i];
