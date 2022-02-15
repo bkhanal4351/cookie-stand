@@ -12,6 +12,7 @@ let Seattle = {
   avgCookieSale: 6.3,
   customer: [],
   averageCookieHour: [],
+  totalCookies: 0,
   customerGenerator: function () {
     for (let i = 0; i < custHourly.length; i++) {
       this.customer.push(randCust(this.minCust, this.maxCust));
@@ -22,6 +23,7 @@ let Seattle = {
     this.customerGenerator();
     for (let j = 0; j < custHourly.length; j++) {
       this.averageCookieHour.push(Math.ceil(this.customer[j] * this.avgCookieSale));
+      this.totalCookies += (this.averageCookieHour[j]);
     }
   }
 };
@@ -42,6 +44,11 @@ Seattle.render = function () {
     ulElem.appendChild(liElm);
   }
 
+  let liTl = document.createElement('li');
+  liTl.textContent = `Total: ${this.totalCookies}`;
+  ulElem.appendChild(liTl);
+
+
 };
 
 let Tokyo = {
@@ -51,6 +58,7 @@ let Tokyo = {
   avgCookieSale: 1.2,
   customer: [],
   averageCookieHour: [],
+  totalCookies: 0,
   customerGenerator: function () {
     for (let i = 0; i < custHourly.length; i++) {
       this.customer.push(randCust(this.minCust, this.maxCust));
@@ -61,6 +69,8 @@ let Tokyo = {
     this.customerGenerator();
     for (let j = 0; j < custHourly.length; j++) {
       this.averageCookieHour.push(Math.ceil(this.customer[j] * this.avgCookieSale));
+      this.totalCookies += (this.averageCookieHour[j]);
+
     }
   }
 };
@@ -82,7 +92,9 @@ Tokyo.render = function () {
     liElm.textContent = `${currentValue} : ${this.averageCookieHour[i]} Cookies`;
     ulElem.appendChild(liElm);
   }
-
+  let liTl = document.createElement('li');
+  liTl.textContent = `Total: ${this.totalCookies}`;
+  ulElem.appendChild(liTl);
 };
 
 
@@ -93,6 +105,7 @@ let Dubai = {
   avgCookieSale: 3.7,
   customer: [],
   averageCookieHour: [],
+  totalCookies: 0,
   customerGenerator: function () {
     for (let i = 0; i < custHourly.length; i++) {
       this.customer.push(randCust(this.minCust, this.maxCust));
@@ -103,6 +116,7 @@ let Dubai = {
     this.customerGenerator();
     for (let j = 0; j < custHourly.length; j++) {
       this.averageCookieHour.push(Math.ceil(this.customer[j] * this.avgCookieSale));
+      this.totalCookies += (this.averageCookieHour[j]);
     }
   }
 };
@@ -124,7 +138,9 @@ Dubai.render = function () {
     liElm.textContent = `${currentValue} : ${this.averageCookieHour[i]} Cookies`;
     ulElem.appendChild(liElm);
   }
-
+  let liTl = document.createElement('li');
+  liTl.textContent = `Total: ${this.totalCookies}`;
+  ulElem.appendChild(liTl);
 };
 
 
@@ -135,6 +151,7 @@ let Paris = {
   avgCookieSale: 2.3,
   customer: [],
   averageCookieHour: [],
+  totalCookies: 0,
   customerGenerator: function () {
     for (let i = 0; i < custHourly.length; i++) {
       this.customer.push(randCust(this.minCust, this.maxCust));
@@ -145,6 +162,7 @@ let Paris = {
     this.customerGenerator();
     for (let j = 0; j < custHourly.length; j++) {
       this.averageCookieHour.push(Math.ceil(this.customer[j] * this.avgCookieSale));
+      this.totalCookies += (this.averageCookieHour[j]);
     }
   }
 };
@@ -166,7 +184,9 @@ Paris.render = function () {
     liElm.textContent = `${currentValue} : ${this.averageCookieHour[i]} Cookies`;
     ulElem.appendChild(liElm);
   }
-
+  let liTl = document.createElement('li');
+  liTl.textContent = `Total: ${this.totalCookies}`;
+  ulElem.appendChild(liTl);
 };
 
 
@@ -177,6 +197,7 @@ let Lima = {
   avgCookieSale: 4.6,
   customer: [],
   averageCookieHour: [],
+  totalCookies: 0,
   customerGenerator: function () {
     for (let i = 0; i < custHourly.length; i++) {
       this.customer.push(randCust(this.minCust, this.maxCust));
@@ -187,6 +208,7 @@ let Lima = {
     this.customerGenerator();
     for (let j = 0; j < custHourly.length; j++) {
       this.averageCookieHour.push(Math.ceil(this.customer[j] * this.avgCookieSale));
+      this.totalCookies += (this.averageCookieHour[j]);
     }
   }
 };
@@ -207,7 +229,9 @@ Lima.render = function () {
     liElm.textContent = `${currentValue} : ${this.averageCookieHour[i]} Cookies`;
     ulElem.appendChild(liElm);
   }
-
+  let liTl = document.createElement('li');
+  liTl.textContent = `Total: ${this.totalCookies}`;
+  ulElem.appendChild(liTl);
 };
 
 
