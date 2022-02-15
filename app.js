@@ -218,22 +218,20 @@ function randCust(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-// let city = [Seattle, Tokyo, Dubai, Paris, Lima]
-// function city(){
-//   for (let i = 0; i < city.length; i++) {
-//     city[i]();
-//   };
+const city = [Seattle, Tokyo, Dubai, Paris, Lima]
+function cityRender() {
+  for (let i = 0; i < city.length; i++) {
+    let eachCity = city[i];
+    eachCity.render();
+  }
+}
 
 
 
-Seattle.render();
-Tokyo.render();
-Dubai.render();
-Paris.render();
-Lima.render();
+// Seattle.render();
+// Tokyo.render();
+// Dubai.render();
+// Paris.render();
+// Lima.render()
 
-
-
-
-
-
+cityRender();
