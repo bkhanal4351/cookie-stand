@@ -1,0 +1,33 @@
+h1{
+  background-color: blueviolet;
+  text-align: center;
+  margin-top: 20px;
+  font-size: large;
+  color: red;
+}
+
+body{
+  background-color: aliceblue;
+}
+img{
+  width: 30%;
+  height: auto;
+  border : 1px solid red;
+  background-size: cover;
+  margin-left: auto;
+  margin-right: auto;
+  float: center;
+  
+}
+p{
+  color: blueviolet;
+}
+ul{
+  color: rebeccapurple;
+  text-align: center;
+  
+}
+h2{
+  color: red;
+  text-align: center;
+}
