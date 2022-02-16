@@ -67,10 +67,13 @@ function createTableHeads() {
   let tlElem = document.createElement('th');
   tlElem.textContent = 'Daily Location Total';
   row1.appendChild(tlElem);
+
+
 }
 
+
+
 Store.prototype.render = function () {
-  //this.avgCookie();
   let row2 = document.createElement('tr');
   let td1Elem = document.createElement('td');
   td1Elem.textContent = this.location;
@@ -83,6 +86,14 @@ Store.prototype.render = function () {
     row2.appendChild(td1Elem);
 
   }
+  // let row3 = document.createElement('tr');
+  // let totalElem = document.createElement('td');
+  // totalElem.textContent = 'Totals';
+  // row3.appendChild(totalElem);
+
+
+
+
   let thElem = document.createElement('td');
   thElem.textContent = this.totalCookies;
   row2.appendChild(thElem);
