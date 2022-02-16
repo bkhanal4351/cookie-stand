@@ -52,7 +52,7 @@ lima.avgCookie();
 function createTableHeads() {
   let row1 = document.createElement('tr');
   let th1Elem = document.createElement('th');
-  th1Elem.textContent = ('city');
+  th1Elem.textContent = ('City');
   row1.appendChild(th1Elem);
   table.appendChild(row1);
 
@@ -64,10 +64,13 @@ function createTableHeads() {
     th1Elem.textContent = custHourly[i];
     row1.appendChild(th1Elem);
   }
-
+  let tlElem = document.createElement('th');
+  tlElem.textContent = 'Daily Location Total';
+  row1.appendChild(tlElem);
 }
 
 Store.prototype.render = function () {
+  //this.avgCookie();
   let row2 = document.createElement('tr');
   let td1Elem = document.createElement('td');
   td1Elem.textContent = this.location;
@@ -78,7 +81,16 @@ Store.prototype.render = function () {
     let td1Elem = document.createElement('td');
     td1Elem.textContent = this.averageCookieHour[i];
     row2.appendChild(td1Elem);
+
   }
+  let thElem = document.createElement('td');
+  thElem.textContent = this.totalCookies;
+  row2.appendChild(thElem);
+  // for(let i=0; i < this.totalCookies.length; i++){
+  //   let tlElem = document.createElement('td');
+  //   tlElem.textContent = this.totalCookies[i];
+  //   row2.appendChild(tlElem);
+  // }
 
 
 
