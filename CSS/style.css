@@ -62,9 +62,26 @@ body #merch ul{
 }
 /* end of merchandise */
 
+/* start of contact */
+
+body #contact {
+  display: flex;
+  flex-direction: column;
+
+}
+
+body #contact ul {
+  display: flex;
+  justify-content: center;
+}
+
+body #contact ul p {
+  padding: 10px;
+}
+/* end of contact */
 
 img{
-  width: 30%;
+  width: 70%;
   height: auto;
   border : 1px solid red;
   background-size: cover;
@@ -72,7 +89,7 @@ img{
   margin-right: auto;
   float: center;
   display: flex;
-  margin-top: 20px;
+  margin-top: 0px;
   margin-bottom: 30px;
   
 }
