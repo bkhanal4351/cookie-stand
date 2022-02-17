@@ -1,14 +1,68 @@
-h1{
-  background-color: blueviolet;
+body{
+  background-color: aliceblue;
+
+}
+
+nav{
+  width: 500px;
+  margin: auto;
+  background-color: aqua;
+}
+nav ul{
+  display: flex;
+  justify-content: space-evenly;
+  list-style: circle;
+  margin-top: 30px;
+}
+body main section {
+  display: flex;
+  width: 960px;
+  margin: auto;
+}
+body main section img {
+  width: 480px;
+}
+body main section div {
+  display: flex;
+  flex-direction: column;
+}
+body main section div h1{
+   background-color: blueviolet;
   text-align: center;
   margin-top: 20px;
   font-size: large;
-  color: red;
+  color: greenyellow;
+  
+}
+/* start of locations */
+body #locations {
+display: flex;
+flex-direction: column;
+background-color:blanchedalmond;
+}
+body #locations ul {
+  display: flex;
+  justify-content: center;
+}
+body #locations ul li{
+  padding:15px;
+}
+/* end of locations */
+
+/* start of merchandise */
+body #merch {
+  display: flex;
+  flex-direction: column;
+  background-color:darkseagreen;
 }
 
-body{
-  background-color: aliceblue;
+body #merch ul{
+  display: flex;
+  justify-content: center;
 }
+/* end of merchandise */
+
+
 img{
   width: 30%;
   height: auto;
@@ -22,10 +76,18 @@ img{
   margin-bottom: 30px;
   
 }
+
+
+
 p{
-  color: blueviolet;
-  text-align: center;
-  margin-top: 30px;
+  height: 300px;
+  font-size: 18px;
+  font-style: oblique;
+  line-height: 25px;
+  text-align: right;
+ 
+
+
 }
 ul{
   color: rebeccapurple;
@@ -33,7 +95,20 @@ ul{
   
 }
 h2{
-  color: red;
+  background-color: blueviolet;
   text-align: center;
-  margin-bottom: 5px;
+  margin-top: 20px;
+  font-size: large;
+  color: greenyellow;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+main {
+  background-color: beige;
+}
+
+footer {
+  text-align: center;
+  margin-bottom: 20px;
 }
