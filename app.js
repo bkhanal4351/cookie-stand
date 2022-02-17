@@ -2,6 +2,7 @@
 
 let SalmonCookie = document.getElementById('salmon-cookies');
 let table = document.getElementById('table');
+let footer = document.getElementById('footer');
 
 let custHourly = ['6', '7', '8', '9', '10', '11', '12', '1', '2', '3', '4', '5', '6', '7'];
 
@@ -49,6 +50,7 @@ tokyo.avgCookie();
 dubai.avgCookie();
 paris.avgCookie();
 lima.avgCookie();
+
 function createTableHeads() {
   let row1 = document.createElement('tr');
   let th1Elem = document.createElement('th');
@@ -107,12 +109,45 @@ Store.prototype.render = function () {
 
 };
 
+function createFooter() {
+  let footer = document.createElement('tfoot');
+  table.appendChild(footer);
+
+  let footerRow = document.createElement('tr');
+  footer.appendChild(footerRow);
+
+  let hourlyTotaltb = document.createElement('th');
+  hourlyTotaltb.textContent = 'Hourly Totals';
+  footerRow.appendChild(hourlyTotaltb);
+
+
+  let dailyTotal = 0;
+  for (let i = 0; i < custHourly.length; i++) {
+    let hourTotal = 0;
+    for (let j = 0; j < stores.length; j++) {
+      hourTotal += (stores[j].averageCookieHour[i]);
+    }
+    let tdhourlyTotal = document.createElement('td');
+    tdhourlyTotal.textContent = `${hourTotal}`;
+    footerRow.appendChild(tdhourlyTotal);
+    dailyTotal += hourTotal;
+
+  }
+
+  let tdDailyTotal = document.createElement('td');
+  tdDailyTotal.textContent = `${dailyTotal}`;
+  footerRow.appendChild(tdDailyTotal);
+
+}
+
 createTableHeads();
 seattle.render();
 tokyo.render();
 dubai.render();
 paris.render();
 lima.render();
+createFooter();
+
 
 // let Seattle = {
 //   location: 'Seattle',
