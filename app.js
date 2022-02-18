@@ -151,7 +151,7 @@ function handleSubmit(event) {
   let minCust = parseInt(event.target.minCust.value);
   let maxCust = parseInt(event.target.maxCust.value);
   let avgCookieSale = parseInt(event.target.avgCookieSale.value);
-console.log(avgCookieSale);
+  console.log(avgCookieSale);
 
   let newCity = new Store(location, minCust, maxCust, avgCookieSale);
 
@@ -164,7 +164,7 @@ console.log(avgCookieSale);
   footer.innerHTML = '';
   createFooter();
 
-  
+
 
 
 }
