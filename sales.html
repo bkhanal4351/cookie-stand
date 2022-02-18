@@ -13,10 +13,41 @@
   <main>
     <h2>Pat's Salmon Cookies</h2>
      <section id="salmon-cookies"></section>
-     <table id="table">
-
-     </table>
+    
      <p><a href="index.html">index</a></p>
+
+<form id="sales-form">
+  
+<fieldset>
+<legend>Calculate average number of cookies sold per hour per location</legend>
+    <label for="'location">Locations</label>
+    <input type="text" name="location" id="location">
+  </label>
+
+  
+
+  <label>
+    Minimun Customers:
+    <input type="number" name="minCust">
+  </label>
+
+  <label>
+    Maximum Customer:
+    <input type="number" name="maxCust">
+  </label>
+
+  <label>
+    Avg Cookie Per Hour:
+    <input type="number" name="avgCookieSale">
+  </label>
+
+  <button id="submit" type="submit">Submit</button>
+
+
+</fieldset>
+</form>
+
+<table id="table"></table>
   </main>
 
   <script src="app.js"></script>

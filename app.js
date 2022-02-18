@@ -2,7 +2,9 @@
 
 let SalmonCookie = document.getElementById('salmon-cookies');
 let table = document.getElementById('table');
-let footer = document.getElementById('footer');
+let cookieForm = document.getElementById('sales-form');
+let footer = document.createElement('tfoot');
+
 
 let custHourly = ['6', '7', '8', '9', '10', '11', '12', '1', '2', '3', '4', '5', '6', '7'];
 
@@ -110,7 +112,7 @@ Store.prototype.render = function () {
 };
 
 function createFooter() {
-  let footer = document.createElement('tfoot');
+  //let footer = document.createElement('tfoot');
   table.appendChild(footer);
 
   let footerRow = document.createElement('tr');
@@ -140,6 +142,36 @@ function createFooter() {
 
 }
 
+
+
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log(event.target);
+  let location = event.target.location.value;
+  let minCust = parseInt(event.target.minCust.value);
+  let maxCust = parseInt(event.target.maxCust.value);
+  let avgCookieSale = parseInt(event.target.avgCookieSale.value);
+console.log(avgCookieSale);
+
+  let newCity = new Store(location, minCust, maxCust, avgCookieSale);
+
+  newCity.avgCookie();
+  newCity.render();
+  console.log(newCity);
+
+
+
+  footer.innerHTML = '';
+  createFooter();
+
+  
+
+
+}
+
+cookieForm.addEventListener('submit', handleSubmit);
+
+
 createTableHeads();
 seattle.render();
 tokyo.render();
@@ -147,7 +179,6 @@ dubai.render();
 paris.render();
 lima.render();
 createFooter();
-
 
 // let Seattle = {
 //   location: 'Seattle',
