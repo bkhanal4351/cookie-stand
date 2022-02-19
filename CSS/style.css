@@ -80,6 +80,21 @@ body #contact ul p {
 }
 /* end of contact */
 
+body #pictures {
+  display: flex;
+  flex-direction: column;
+  background-color:darkseagreen;
+}
+body #pictures ul {
+  display: flex;
+  justify-content: center;
+
+}
+
+body #pictures ul li {
+  padding: 10px;
+}
+
 img{
   width: 70%;
   height: auto;
