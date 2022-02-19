@@ -1,6 +1,6 @@
 'use strict';
 
-let SalmonCookie = document.getElementById('salmon-cookies');
+//let SalmonCookie = document.getElementById('salmon-cookies');
 let table = document.getElementById('table');
 let cookieForm = document.getElementById('sales-form');
 let footer = document.createElement('tfoot');
@@ -8,7 +8,7 @@ let footer = document.createElement('tfoot');
 
 let custHourly = ['6', '7', '8', '9', '10', '11', '12', '1', '2', '3', '4', '5', '6', '7'];
 
-let myLocation = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima'];
+//let myLocation = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima'];
 let stores = [];
 
 function Store(location, minCust, maxCust, avgCookieSale) {
@@ -168,7 +168,6 @@ function handleSubmit(event) {
 
 
 }
-
 cookieForm.addEventListener('submit', handleSubmit);
 
 
